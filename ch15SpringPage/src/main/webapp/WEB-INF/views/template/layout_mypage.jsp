@@ -14,7 +14,7 @@
 		<div id="main_header">
 			<tiles:insertAttribute name="header"/>
 		</div>
-		<div id="side-height">
+		<div class="side-height">
 			<div class="page_nav">
 				<tiles:insertAttribute name="nav"/>
 			</div>
