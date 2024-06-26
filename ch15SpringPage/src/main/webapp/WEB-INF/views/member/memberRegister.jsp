@@ -5,17 +5,14 @@
 <!-- 회원가입 시작 -->
 <div class="page-main">
 	<h2>회원가입</h2>
-	<form:form action="registerUser" id="member_register"
-	                            modelAttribute="memberVO">
+	<form:form action="registerUser" id="member_register" modelAttribute="memberVO">
 		<ul>
 			<li>
 				<form:label path="id">아이디</form:label>
-				<form:input path="id" placeholder="영문,숫자만 4~12자"
-				                             autocomplete="off"/>
-				<input type="button" id="confirmId" value="ID중복체크"
-				                                 class="default-btn">                             
+				<form:input path="id" placeholder="영문,숫자만 4~12자" autocomplete="off"/>
+				<input type="button" id="confirmId" value="ID중복체크" class="default-btn">
 				<span id="message_id"></span>
-				<form:errors path="id" cssClass="error-color"/>                             
+				<form:errors path="id" cssClass="error-color"/>
 			</li>
 			<li>
 				<form:label path="name">이름</form:label>
@@ -44,8 +41,7 @@
 			<li>
 				<form:label path="zipcode">우편번호</form:label>
 				<form:input path="zipcode"/>
-				<input type="button" onclick="execDaumPostcode()"
-				               value="우편번호 찾기" class="default-btn">
+				<input type="button" onclick="execDaumPostcode()" value="우편번호 찾기" class="default-btn">
 				<form:errors path="zipcode" cssClass="error-color"/>
 			</li>
 			<li>
@@ -58,16 +54,15 @@
 				<form:input path="address2"/>
 				<form:errors path="address2" cssClass="error-color"/>
 			</li>
-		</ul> 
+		</ul>
 		<div class="align-center">
 			<form:button class="default-btn">전송</form:button>
-			<input type="button" value="홈으로"
-			  class="default-btn"
-			  onclick="location.href='${pageContext.request.contextPath}/main/main'">
-		</div>                           
+			<input type="button" value="홈으로" class="default-btn" onclick="location.href='${pageContext.request.contextPath}/main/main'">
+		</div>
 	</form:form>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/member.register.js"></script>
+
 	<!-- 우편번호 시작 -->
 	<!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
 <div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;">
@@ -168,7 +163,3 @@
 	<!-- 우편번호 끝 -->
 </div>
 <!-- 회원가입 끝 -->
-
-
-
-

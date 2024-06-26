@@ -5,15 +5,13 @@
 <!-- 회원로그인 시작 -->
 <div class="page-main">
 	<h2>회원로그인</h2>
-	<form:form action="login" id="member_login"
-	                            modelAttribute="memberVO">
-	     <form:errors element="div" cssClass="error-color"/>
+	<form:form action="login" id="member_login" modelAttribute="memberVO">
+		<form:errors element="div" cssClass="error-color"/>
 		<ul>
 			<li class="floating-label">
-				<form:input path="id" placeholder="아이디"
-				                             autocomplete="off" cssClass="form-input"/>
-				<form:label path="id">아이디</form:label>                       
-				<form:errors path="id" cssClass="error-color"/>                             
+				<form:input path="id" placeholder="아이디" autocomplete="off" cssClass="form-input"/>
+				<form:label path="id">아이디</form:label>
+				<form:errors path="id" cssClass="error-color"/>
 			</li>
 			<li class="floating-label">
 				<form:password path="passwd" placeholder="비밀번호" cssClass="form-input"/>
@@ -21,22 +19,16 @@
 				<form:errors path="passwd" cssClass="error-color"/>
 			</li>
 			<li>
-				<label for ="auto"><input type="checkbox" name="auto" id="auto">로그인상태유지</label>
+				<label for="auto"><input type="checkbox" name="auto" id="auto">로그인 상태 유지</label>
 			</li>
-		</ul> 
+		</ul>
 		<div>
 			<form:button class="login-btn">로그인</form:button>
-		</div>                           
+		</div>
 	</form:form>
 	<p class="align-center">
-			<input type="button" value="홈으로"
-			  class="default-btn"
-			  onclick="location.href='${pageContext.request.contextPath}/main/main'">
-			  <input type="button" value="비밀번호 찾기">
+		<input type="button" value="홈으로" class="default-btn" onclick="location.href='${pageContext.request.contextPath}/main/main'">
+		<input type="button" value="비밀번호 찾기">
 	</p>
 </div>
 <!-- 회원로그인 끝 -->
-
-
-
-

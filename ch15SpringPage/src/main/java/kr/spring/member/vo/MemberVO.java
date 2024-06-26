@@ -39,7 +39,7 @@ public class MemberVO {
 	private String zipcode;
 	@NotBlank
 	private String address1;
-	@NotBlank
+	@NotEmpty
 	private String address2;
 	private byte[] photo;
 	private String photo_name;
@@ -51,25 +51,19 @@ public class MemberVO {
 	private String now_passwd;
 	
 	//비밀번호 일치 여부 체크
-	public boolean ischeckedPassword(String userPasswd) {
+	public boolean ischechedPassword(String userPasswd) {
 		if(auth > 1 && passwd.equals(userPasswd)) {
 			return true;
 		}
 		return false;
 	}
-	//이미지 BOLB 처리
+	//이미지 BLOB 처리
 	//(주의)폼에서 파일업로드 파라미터네임은 반드시 upload로 지정해야 함
-	public void setUpload(MultipartFile upload)
-	                                 throws IOException{
-		//MultipartFile -> byte[]
+	public void setUpload(MultipartFile upload)throws IOException {
+		//MultipartFile > byte[]
 		setPhoto(upload.getBytes());
 		//파일 이름
 		setPhoto_name(upload.getOriginalFilename());
 	}
+
 }
-
-
-
-
-
-

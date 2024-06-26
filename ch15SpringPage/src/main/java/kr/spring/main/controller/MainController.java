@@ -12,18 +12,8 @@ public class MainController {
 	public String init() {
 		return "redirect:/main/main";
 	}
-	
 	@GetMapping("/main/main")
 	public String main() {
 		return "main";//Tiles의 설정명
 	}
-	
 }
-
-
-
-
-
-
-
-
