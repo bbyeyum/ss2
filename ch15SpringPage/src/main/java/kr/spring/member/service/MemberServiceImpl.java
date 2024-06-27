@@ -38,7 +38,7 @@ public class MemberServiceImpl implements MemberService{
 
 	@Override
 	public void updatePassword(MemberVO member) {
-		// TODO Auto-generated method stub
+		memberMapper.updatePassword(member);
 		
 	}
 
@@ -46,6 +46,35 @@ public class MemberServiceImpl implements MemberService{
 	public void deleteMember(Long mem_num) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void updateAu_id(String au_id, Long mem_num) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void selectAu_id(String au_id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAu_id(Long mem_num) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateRandomPassword(MemberVO member) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateProfile(MemberVO member) {
+		memberMapper.updateProfile(member);
 	}
 	
 }
